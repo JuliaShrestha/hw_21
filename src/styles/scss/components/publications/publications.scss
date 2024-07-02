@@ -1,0 +1,58 @@
+.publications {
+  background-color: map-get($colors, 'gray-bg');
+  padding: 30px 0;
+
+  .card {
+    border-radius: 8px;
+    border:none;
+    overflow: hidden;
+    transition: 0.3s box-shadow ;
+    cursor: pointer;
+    height: 450px;
+
+    &:hover {
+      box-shadow: 0 0 15px -4px black;
+    }
+  }
+
+  .card-body {
+    padding: 30px;
+  }
+
+  &__img-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px;
+  }
+
+  &__title {
+    color: map-get($colors, 'blue');
+    font-size: map-get($font-sizes, 'sm');
+    font-weight: 700;
+    line-height: 19px;
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    font-size: map-get($font-sizes, 'fs12');
+    color: map-get($colors, 'gray');
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  hr {
+    border-width: 4px;
+    margin: 15px 0;
+    border-color: map-get($colors, 'light-gray');
+    opacity: 1;
+  }
+
+  &__text {
+    color: map-get($colors, 'black');
+    font-size: map-get($font-sizes, 'xs');
+    line-height: 22px;
+
+  }
+}

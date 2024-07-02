@@ -1,0 +1,117 @@
+.header {
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  &.header-light {
+    position: static;
+    padding-bottom: 60px;
+
+    .header__lang-switcher{
+      span {
+        color: map-get($colors, 'gray');
+    }
+
+      input:checked + span {
+        color: map-get($colors, 'white');
+      }
+    }
+
+    .header__address a, .header__contact a, .header__socials a {
+      color: map-get($colors, 'gray');
+    }
+
+    .header__dot-after:after {
+      background: map-get($colors, 'gray');
+    }
+
+    .navbar-nav .nav-item a {
+      color: map-get($colors, 'blue');
+    }
+
+    .active {
+      padding-bottom: 3px!important;
+      color: map-get($colors, 'accent-color') !important;
+      border-bottom: solid 2px map-get($colors, 'accent-color') !important;
+    }
+  }
+
+  .navbar-toggler {
+    color: map-get($colors, 'white');
+    border-color: map-get($colors, 'white');
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .navbar-brand {
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar-nav {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+
+    .nav-item a {
+      font-size: map-get($font-sizes, 'sm');
+      color: map-get($colors, 'white');
+      font-weight: 700;
+      padding: 0;
+    }
+  }
+
+
+  &__top {
+    position: absolute;
+    top: 0;
+    right: 17px;
+
+  }
+
+  &__lang-switcher {
+
+    input {
+      display: none;
+    }
+
+    span {
+      cursor: pointer;
+      font-size: map-get($font-sizes, 'fs12');
+      font-weight: 700;
+      color: map-get($colors, 'white');
+      display: inline-block;
+      padding: 8px 7px;
+      border-radius: 8px;
+    }
+
+    input:checked + span {
+      background-color: map-get($colors, 'accent-color');
+    }
+  }
+
+  &__address a, &__contact a, &__socials a {
+    color: map-get($colors, 'white');
+    text-decoration: none;
+    font-size: map-get($font-sizes, 'sm');
+  }
+
+  &__contact a {
+    font-weight: 700;
+  }
+
+  &__dot-after:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: map-get($colors, 'white');
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+  }
+
+}

@@ -1,0 +1,27 @@
+@media (max-width: 991px) {
+
+  .team {
+
+    &__member {
+      flex-direction: column;
+    }
+
+    &__text {
+      width: 100%;
+    }
+
+    &__photo {
+      width: 100%;
+      min-height: 500px;
+    }
+
+    .section-header {
+
+      &__title {
+        letter-spacing: 1px;
+        line-height: 46px;
+      }
+    }
+  }
+
+}

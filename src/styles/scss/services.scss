@@ -1,0 +1,155 @@
+@import "./common";
+
+@import "./components/header";
+@import "./components/services";
+@import "./components/section-header";
+@import "./components/clients";
+@import "./components/footer";
+
+.page-services {
+
+  .header {
+    &__lang-switcher input:checked + span {
+      background-color: map-get($colors, 'accent-color');
+    }
+
+    .active {
+      padding-bottom: 3px!important;
+      color: map-get($colors, 'accent-color') !important;
+      border-bottom: solid 2px map-get($colors, 'accent-color') !important;
+    }
+
+  }
+
+  .gradient-bg {
+    padding-top: 180px;
+
+    .services {
+
+
+      &__title h6 {
+        transition: 0.3s color;
+        cursor: pointer;
+
+        &:hover {
+          color: map-get($colors, 'accent-color') !important;
+        }
+      }
+    }
+  }
+
+  .clients {
+    margin-top: 60px;
+    padding-bottom: 0;
+  }
+
+  .footer {
+    .container {
+      padding-top: 30px;
+
+      &:before {
+        content: none !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .page-services {
+
+    .header {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__top {
+        top: -40px;
+        left: -250px;
+      }
+    }
+
+    .clients {
+      .container {
+        align-items: center;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 767px) {
+  .page-services {
+
+    .header {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__top {
+        top: -40px;
+        left: -70px;
+      }
+    }
+
+    .footer {
+
+      .dot-after:after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 2px 6px 2px 10px;
+        background-color: #B3B3BA;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__address, &__contacts ul {
+        flex-direction: row;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .header {
+    &__top {
+      position: absolute;
+      top: -60px !important;
+      left: 0 !important;
+      padding: 10px 15px;
+      justify-content: space-between !important;
+      background-color: rgba(255, 255, 255, 0.34);
+    }
+  }
+
+  .footer {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__address, &__contacts ul {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .dot-after:after {
+      content: none !important;
+    }
+  }
+
+}
+

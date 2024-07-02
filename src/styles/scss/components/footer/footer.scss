@@ -1,0 +1,55 @@
+.footer {
+  background-color: map-get($colors, 'gray-bg');
+  padding-bottom: 30px;
+
+  a {
+    color: map-get($colors, 'blue');
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+
+  }
+
+  .dot-after:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px 6px 2px 10px;
+    background-color: map-get($colors, 'gray');
+  }
+
+  .container {
+
+    &:before {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: map-get($colors, 'light-gray');
+      margin-bottom: 30px;
+    }
+  }
+
+  &__address, &__copyright {
+    margin-bottom: 30px;
+  }
+
+  &__address {
+    font-size: map-get($font-sizes, 'sm');
+    color: map-get($colors, 'electric');
+  }
+
+  &__copyright {
+    color: map-get($colors, 'gray');
+    font-size: map-get($font-sizes, 'sm');
+    text-align: right;
+  }
+
+  &__phone a{
+    color: map-get($colors, 'electric');
+  }
+
+
+}

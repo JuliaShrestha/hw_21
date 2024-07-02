@@ -1,0 +1,18 @@
+{
+  "name": "hw_21",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile-home-page": "sass --watch ./src/styles/scss/home.scss:./src/styles/css/home.css",
+    "compile-services-page": "sass --watch ./src/styles/scss/services.scss:./src/styles/css/services.css",
+    "compile-publications-page": "sass --watch ./src/styles/scss/publications.scss:./src/styles/css/publications.css",
+    "compile-team-page": "sass --watch ./src/styles/scss/team.scss:./src/styles/css/team.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}

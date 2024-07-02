@@ -1,0 +1,81 @@
+.team {
+
+  .section-header {
+    margin-bottom: 60px;
+
+    &__container {
+      max-width: 1080px;
+      margin: auto;
+
+      h3 {
+        color: map-get($colors, 'title-gradient');
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 60px;
+  }
+
+  &__item-photo {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  &__item-label {
+    justify-content: space-between;
+  }
+
+  &__item-title {
+
+    h2 {
+      font-weight: 700;
+      color: map-get($colors, 'electric');
+      font-size: map-get($font-sizes, 'sm');
+      margin-bottom: 5px;
+
+      &:hover {
+        color: map-get($colors, 'accent-color');
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      letter-spacing: 1px;
+      color: map-get($colors, 'gray');
+      font-size: map-get($font-sizes, 'xs');
+
+    }
+  }
+
+  &__item-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: map-get($colors, 'gray-bg');
+
+    &:hover {
+      box-shadow: 0 0 10px -5px map-get($colors, 'black');
+    }
+
+    button {
+      border: none;
+      margin-left: 7px;
+      margin-top: 7px;
+      background-color: transparent;
+    }
+
+    i {
+      color: map-get($colors, 'blue');
+
+      &:hover {
+        color: map-get($colors, 'accent-color');
+      }
+    }
+  }
+}
